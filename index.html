@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="./css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./img/logo_semana11_s2.webp" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">DOM Traversing</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">HTMLCollections</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">NodeList</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Métodos DOM</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">EJEMPLOS 1</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">DOM TRAVERSING</h2>
+                    <div class="subheading mb-3">¿Que es?</div>
+                    <p>Es la forma como nosotros atravesamos o navegamos por el DOM. Es decir las direcciones que podemos tomar, ya sea de padre a hijo, entre hermanos de elementos, viceversa de estos.</p>
+                    <img class="w-50 mt-2" src="./img/dom_traversing.webp" alt="imagen dom">
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">HTMLCollections</h2>
+                    <div class="subheading mb-3">¿Que es?</div>
+                    <p>La interfaz HTMLCollection representa una colección genérica (objeto tipo array similar a arguments) de elementos (en orden de documento) y ofrece métodos y propiedades para seleccionarlos de la lista.</p>
+                    <div class="subheading mt-3 mb-3">Se recomienda...</div>
+                    <p>Acceder a un html collection y poder recorrerlos para aplicar estilos o poder trabajar con ellos de manera individual.</p>
+                    <p>Ejemplo:</p>
+                    <p>Cambie el color del texto de todos los elementos < p >:</p>
+                    <pre>const myCollection = document.getElementsByTagName("p");
+for (let i = 0; i < myCollection.length; i++) {
+    myCollection[i].style.color = "red";
+}</pre>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">NODE List</h2>
+                    <div class="subheading mb-3">¿Que es?</div>
+                    <p>Los objetos NodeList son colecciones de nodos como los devueltos por propiedades como Node.childNodes y el método document.querySelectorAll().</p>
+                    <p>En algunos casos, NodeList es una colección en vivo, lo que significa que los cambios en el DOM se reflejan en la colección.</p>
+                    <div class="subheading mt-3 mb-3">Se recomienda...</div>
+                    <p>Acceder a los elementos de NodeList mediante un número de índice o recorrelos y aplicar estilos, etc.</p>
+                    <p>Ejemplo:</p>
+                    <p>Cambie el color de todos los elementos < p > en una lista de nodos:</p>
+                    <pre>const myNodelist = document.querySelectorAll("p");
+for (let i = 0; i < myNodelist.length; i++) {
+    myNodelist[i].style.color = "red";
+}</pre>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Métodos DOM</h2>
+                    <div class="subheading mb-3">¿Que es?</div>
+                    <p>Los métodos son acciones que se realizarán sobre un elemento HTML seleccionado por javascript.</p>
+                    <div class="subheading mt-3 mb-3">Ejemplos:</div>
+                    <ul>
+                        <li>document.getElementById(id)</li>
+                        <li>document.getElementsByClassName(nombreDeClase)</li>
+                        <li>myCollection.length</li>
+                        <li>document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue</li>
+                        <li>etc..etc..etc</li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Ejemplo 1</h2>
+                    <div class="subheading mb-3">Creacion de 3 elementos (mediante javascript). Van agregar clase y id al elemento.</div>
+                    <div id="miejemplo"></div>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="./js/scripts.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>
